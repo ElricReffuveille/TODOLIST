@@ -54,6 +54,7 @@ main {
 
 .title-section {
     position: relative;
+    min-width: 507px;
 }
 .title-section .fa-plus {
     position: absolute;
