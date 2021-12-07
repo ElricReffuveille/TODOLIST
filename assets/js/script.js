@@ -1,5 +1,26 @@
 jQuery(document).ready(function($) {
+
+    function setTrashes(tasker) {
+        //Evenement à la suppresion d'une tâche
+        $(tasker+' .fa-trash').on('click', function(event) {
+            $(event.target).parent().parent().parent().remove();
+        });
+    }
+
+    function setDone(tasker) {
+        //Evenement à la validation d'une tâche
+        $(tasker+' .fa-check').on('click', function(event) {
+            let task = $(event.target).parent().parent().parent();
     
+            task.attr("style", "font-style:italic");
+            task.find("#task-desc").attr("style", "text-decoration: line-through;")
+        });
+    }
+
+    setTrashes('#task1');
+    setDone('#task1');
+
+    //Evenement à la soumission du formulaire
     $('form').on('submit', function(event) {
         event.preventDefault();
         
@@ -34,10 +55,18 @@ jQuery(document).ready(function($) {
             //Ajout nouvelle tâche
             $('.tasks').append(task);
 
+            setTrashes('#task'+cpt);
+            setDone('#task'+cpt);
+
             //Valeurs du formulaire
             $('#desc').val("");
             $('#date').val("");
         }
+    });
+
+    //Evenement à la modification d'une tâche
+    $('.fa-pen').on('click', function(event) {
+
     });
 
 });
