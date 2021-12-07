@@ -7,6 +7,10 @@ jQuery(document).ready(function($) {
     $('.fa-times').on('click', function(event) {
         $('.formulaire').removeClass('show');
     });
+    //Evenement à la modification d'une tâche
+    $('.fa-pen').on('click', function(event) {
+
+    });
 
     function setTrashes(tasker) {
         //Evenement à la suppresion d'une tâche
@@ -71,11 +75,6 @@ jQuery(document).ready(function($) {
             $('#date').val("");
             $('.formulaire').removeClass('show');
         }
-    });
-
-    //Evenement à la modification d'une tâche
-    $('.fa-pen').on('click', function(event) {
-
     });
 
 });
