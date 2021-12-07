@@ -3,8 +3,7 @@ header {
     padding: 15px;
 }
 main {
-    height: 85vh;
-    max-height: 550px;
+    min-height: 85vh;
 
     display: flex;
     justify-content: space-evenly;
@@ -17,6 +16,7 @@ main {
     border-radius: 15px;
     box-shadow: 5px 5px 15px 5px #C2C2C2;
     overflow: hidden;
+    margin: 25px;
 }
 
 .task-list H2 {
@@ -32,6 +32,13 @@ main {
 
 /* Style de une seule tâche */
 .task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style de une seule tâche */
+.task-item div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,7 +61,7 @@ main {
 .task-item .task-content {
     display: flex;
     flex-direction: column;
-    margin-right: 25px;
+    min-width: 200px;
 }
 
 .task-item .task-content > span {
