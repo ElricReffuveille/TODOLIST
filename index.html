@@ -24,34 +24,40 @@
     <main>
 
         <!-- Formulaire d'ajout de tâches-->
-        <section>
-            <h2 class="text-center">Formulaire d'ajout de t&acirc;ches</h2>
-            <form method="POST">
-                <div class="mb-3 row">
-                    <div class="col-3">
-                        <label for="desc" class="col-form-label">Description</label>
+        <section class="formulaire">
+            <div class="wrapper">
+                <h2 class="text-center">Formulaire de gestion des t&acirc;ches</h2>
+                <div class="fas fa-times"></div>
+                <form method="POST">
+                    <div class="mb-3 row">
+                        <div class="col-3">
+                            <label for="desc" class="col-form-label">Description</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" id="desc" name="desc" class="form-control">
+                        </div>
                     </div>
-                    <div class="col-9">
-                        <input type="text" id="desc" name="desc" class="form-control">
+                    <div class="mb-3 row">
+                        <div class="col-3">
+                            <label for="date" class="form-label">&Eacute;ch&eacute;ance</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="date" id="date" name="date" class="form-control">
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 row">
-                    <div class="col-3">
-                        <label for="date" class="form-label">&Eacute;ch&eacute;ance</label>
+                    <div class="d-grid gap-2">
+                            <input type="submit" value="Créer la tache" class="btn btn-primary">
                     </div>
-                    <div class="col-9">
-                        <input type="date" id="date" name="date" class="form-control">
-                    </div>
-                </div>
-                <div class="d-grid gap-2">
-                        <input type="submit" value="Créer la tache" class="btn btn-primary">
-                </div>
-            </form>
+                </form>
+            </div>
         </section>
 
         <!-- Liste des tâches -->
         <section class="task-list">
-            <h2 class="text-center">Liste des t&acirc;ches</h2>
+            <div class="title-section">
+                <h2 class="text-center">Liste des t&acirc;ches</h2>
+                <div class="fas fa-plus"></div>
+            </div>
             <ul class="tasks">
                 <!-- Exemple de tâche -->
                 <li id="task1" class="task-item">

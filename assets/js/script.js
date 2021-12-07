@@ -1,4 +1,12 @@
 jQuery(document).ready(function($) {
+    //Evénement au dévoilement du formulaire
+    $('.fa-plus').on('click', function(event) {
+        $('.formulaire').addClass('show');
+    });
+    //Evénement au masquage du formulaire
+    $('.fa-times').on('click', function(event) {
+        $('.formulaire').removeClass('show');
+    });
 
     function setTrashes(tasker) {
         //Evenement à la suppresion d'une tâche
@@ -61,6 +69,7 @@ jQuery(document).ready(function($) {
             //Valeurs du formulaire
             $('#desc').val("");
             $('#date').val("");
+            $('.formulaire').removeClass('show');
         }
     });
 
