@@ -1,7 +1,7 @@
 # TODOLIST
 Création todolistapp for CDSI 2122 - ADEN LH
 
-Made by (Elric Reffuveille)[https://tips-formation.fr/]
+Made by [Elric Reffuveille](https://tips-formation.fr/)
 
 ## HOW TO USE
 ### Installation
